@@ -1,101 +1,77 @@
-import Image from "next/image";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Magnetic } from '@/components/ui/magnetic';
+import { Code2, Mail, Sparkles } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-black text-white">
+      {/* Hero Section */}
+      <div className="relative min-h-screen flex flex-col items-center justify-center gap-16">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-violet-500/10 to-transparent" />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDAgTCAyMCAwIE0gMCAwIEwgMCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="container mx-auto px-6 relative">
+          <div className="flex flex-col gap-6">
+            <Magnetic range={20}>
+              <Badge className="mb-8 py-2 bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors border-0">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Open to Work
+              </Badge>
+            </Magnetic>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 relative">
+              <span className=" leading-[1.1] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+                Développeur Fullstack
+                <br />
+                avec une affinité pour le Frontend
+              </span>
+              &nbsp;
+              <span className="">😁</span>
+            </h1>
+
+            <p className="text-xl text-gray-400 max-w-xl">
+              Je transforme des idées en expériences numériques uniques.
+              Spécialisé dans le développement d&apos;applications web
+              innovantes.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button className="flex bg-zinc-200 text-black hover:bg-zinc-300 transition-colors text-lg px-5 py-3">
+                <Mail className="mr-2 h-4 w-4" size={24} />
+                Prends contact
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="container mx-auto px-6">
+          <div className="flex items-center gap-4 mb-12 mt-4">
+            <Code2 className="w-6 h-6 text-blue-500" />
+            <h2 className="text-2xl font-bold">Stack Technique</h2>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {[
+              'JavaScript',
+              'TypeScript',
+              'React',
+              'Next.js',
+              'Angular',
+              'Docker',
+              'GraphQL',
+              'Prisma',
+              'Drizzle',
+              'Tailwind CSS',
+              'Wordpress',
+            ].map((tech) => (
+              <div
+                key={tech}
+                className="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors cursor-default"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
