@@ -1,3 +1,5 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Magnetic } from '@/components/ui/magnetic';
@@ -36,7 +38,13 @@ export default function Home() {
               innovantes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="flex bg-zinc-200 text-black hover:bg-zinc-300 transition-colors text-lg px-5 py-3">
+              <Button
+                className="flex bg-zinc-200 text-black hover:bg-zinc-300 transition-colors text-lg px-5 py-3"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'mailto:ma.scarlatella@gmail.com';
+                }}
+              >
                 <Mail className="mr-2 h-4 w-4" size={24} />
                 Prends contact
               </Button>
