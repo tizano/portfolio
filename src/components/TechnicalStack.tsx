@@ -1,7 +1,7 @@
 import { Code2 } from 'lucide-react';
 import { Magnetic } from './ui/magnetic';
 
-const TechnicalStack = () => {
+const TechnicalStack: React.FC = () => {
   const techs = [
     'JavaScript',
     'TypeScript',
@@ -19,7 +19,7 @@ const TechnicalStack = () => {
     <section className="flex flex-col gap-6">
       <div className="flex items-center gap-4">
         <Code2 className="w-6 h-6 text-blue-500" />
-        <h2 className="text-2xl font-bold">Stack Technique</h2>
+        <h2 className="text-fluid-lg font-bold">Stack Technique</h2>
       </div>
       <div className="flex flex-wrap gap-3">
         {techs.map((tech) => (

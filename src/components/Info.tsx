@@ -3,12 +3,12 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { Magnetic } from './ui/magnetic';
 
-const Info = () => {
+const Info: React.FC = () => {
   return (
     <section className="flex flex-col gap-8">
       <div className="flex">
         <Magnetic>
-          <Badge className="flex mb-8 py-2 bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors border-0">
+          <Badge className="flex mb-2 py-2 bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors border-0">
             <Sparkles className="w-3 h-3 mr-1" />
             <span>Open to Work</span>
           </Badge>
@@ -25,9 +25,10 @@ const Info = () => {
         <span className="">😁</span>
       </h1>
 
-      <p className="text-xl text-gray-400 max-w-xl">
+      <p className="text-fluid-lg text-gray-400 leading-tight max-w-[50vw]">
         Je transforme des idées en expériences numériques uniques. Spécialisé
-        dans le développement d&apos;applications web innovantes.
+        dans le développement d&apos;applications web innovantes{' '}
+        <b>depuis plus de 8 ans.</b>
       </p>
       <div className="flex flex-wrap gap-4">
         <Button
