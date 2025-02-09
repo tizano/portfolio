@@ -15,8 +15,8 @@ const Info: React.FC = () => {
         </Magnetic>
       </div>
 
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 relative">
-        <span className="leading-[1.1] bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+      <h1 className="text-fluid-xl leading-tight md:leading-[1.1] font-bold mb-6 relative">
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
           Développeur Fullstack
           <br />
           avec une affinité pour le Frontend
@@ -25,7 +25,7 @@ const Info: React.FC = () => {
         <span className="">😁</span>
       </h1>
 
-      <p className="text-fluid-lg text-gray-400 leading-tight max-w-[50vw]">
+      <p className="text-fluid-lg text-gray-400 leading-tight lg:max-w-[70vw] xl:max-w-[50vw] transition-all">
         Je transforme des idées en expériences numériques uniques. Spécialisé
         dans le développement d&apos;applications web innovantes{' '}
         <b>depuis plus de 8 ans.</b>
