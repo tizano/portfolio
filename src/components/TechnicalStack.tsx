@@ -7,13 +7,18 @@ const TechnicalStack: React.FC = () => {
     'TypeScript',
     'React',
     'Next.js',
+    'Tanstack Query',
     'Angular',
     'Docker',
     'GraphQL',
+    'API REST',
     'Prisma',
     'Drizzle',
     'Tailwind CSS',
     'Wordpress',
+    'WooCommerce',
+    'NX monorepo',
+    'Storybook',
   ];
   return (
     <section className="flex flex-col gap-6">
